@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/tabla', function () {
+    return view('tablaAlumnos');
+});
+
+Route::post('/insertAlumnos', [TodosController::class, 'store'])->name('todos');
